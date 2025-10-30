@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, useScroll, useTransform, useSpring } from 'framer-motion';
 import { Github, Instagram, MessageCircle, Moon, Sun, ArrowUp, ExternalLink } from 'lucide-react';
+import avatarImage from 'public/avatar.png';
 
 // ============================================
 // MAIN APP COMPONENT
@@ -430,11 +431,13 @@ const TechabduPortfolio = () => {
                   boxShadow: isDark ? '0 8px 30px rgba(106, 103, 206, 0.3)' : '0 8px 30px rgba(106, 103, 206, 0.2)'
                 }}
               >
-                {/* Placeholder avatar - geometric male silhouette */}
-                <svg viewBox="0 0 100 100" className="w-full h-full" style={{ backgroundColor: theme.cardBg }}>
-                  <circle cx="50" cy="35" r="18" fill={theme.accent} opacity="0.8" />
-                  <path d="M 30 65 Q 30 50 50 50 Q 70 50 70 65 L 70 100 L 30 100 Z" fill={theme.accent} opacity="0.8" />
-                </svg>
+                {/* profile picture */}
+                <img 
+                  src={avatarImage} 
+                  alt="Abdurrahman Ishaq Muhammad"
+                  className="w-full h-full object-cover"
+                  loading="lazy"
+                />
               </motion.div>
             </motion.div>
 
