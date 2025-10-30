@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, useScroll, useTransform, useSpring } from 'framer-motion';
 import { Github, Instagram, MessageCircle, Moon, Sun, ArrowUp, ExternalLink } from 'lucide-react';
-import avatarImage from 'public/avatar.png';
+import avatarImage from '/avatar.png';
 
 // ============================================
 // MAIN APP COMPONENT
