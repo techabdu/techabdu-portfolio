@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, useScroll, useTransform, useSpring } from 'framer-motion';
-import { Github, Instagram, MessageCircle, Moon, Sun, ArrowUp, ExternalLink } from 'lucide-react';
-import avatarImage from '/avatar.png';
+import { Github, Instagram, MessageCircle, Send, Moon, Sun, ArrowUp, ExternalLink } from 'lucide-react';
+import avatarImage from './assets/avatar.png';
 
 // ============================================
 // MAIN APP COMPONENT
@@ -21,7 +21,7 @@ const TechabduPortfolio = () => {
   const [typedText, setTypedText] = useState('');
   
   // Full text to be typed out in hero section
-  const fullText = "Crafting web experiences that work beautifully.";
+  const fullText = "delivers high-impact, functional MVPs and features by directing LLMs with surgical precision.";
   
   // Scroll progress for parallax effects
   const { scrollYProgress } = useScroll();
@@ -103,33 +103,34 @@ const TechabduPortfolio = () => {
   const projects = [
     {
       id: 1,
-      name: 'Collage Library',
-      description: 'A digital catalog system for managing and discovering college resources. Built with a focus on clean UI and intuitive navigation, making academic materials easily accessible.',
-      tech: ['PHP', 'JavaScript', 'CSS', 'Bootstrap'],
-      url: '#' // Placeholder URL
+      name: 'iStore',
+      description: 'A Multi-tenant store management system for phone shops with features such as inventory management, sales management, finance management, users management, etc.',
+      tech: ['PHP (Laravel)', 'Blade'],
+      url: 'https://salsabeelistore.shop/' // URL
     },
+
     {
       id: 2,
-      name: 'iStore',
-      description: 'A modern e-commerce platform featuring inventory management, secure checkout, and a streamlined shopping experience. Built on Laravel\'s robust framework for scalability and performance.',
-      tech: ['PHP (Laravel)', 'JavaScript', 'CSS'],
-      url: '#' // Placeholder URL
+      name: 'A digital version of the collage library',
+      description: 'A platform where users (students, lecturers, and researchers) can: Access library information resources and updates, Find digital materials like e-books and journals, Browse databases like DOAJ, ScienceDirect, etc.',
+      tech: ['PHP', 'JavaScript', 'CSS'],
+      url: 'https://github.com/techabdu/coezlibrary.git' // URL
     }
   ];
 
   // ============================================
   // TECH STACK DATA
   // ============================================
-  const techStack = ['PHP', 'Bootstrap', 'CSS', 'JavaScript', 'Python'];
+  const techStack = ['PHP', 'React', 'Python'];
 
   // ============================================
   // SOCIAL LINKS DATA
   // ============================================
   const socialLinks = [
     { name: 'GitHub', icon: Github, url: 'https://github.com/techabdu' },
-    { name: 'Instagram', icon: Instagram, url: 'https://instagram.com/techabdu' },
-    { name: 'TikTok', icon: MessageCircle, url: 'https://tiktok.com/@techabdu' },
-    { name: 'WhatsApp', icon: MessageCircle, url: 'https://wa.me/1234567890' }
+    { name: 'Instagram', icon: Instagram, url: 'https://instagram.com/thetechabdu' },
+    { name: 'TikTok', icon: Send, url: 'https://tiktok.com/@thetechabdu' },
+    { name: 'WhatsApp', icon: MessageCircle, url: 'https://wa.me/2349022167945' }
   ];
 
   // ============================================
@@ -418,7 +419,7 @@ const TechabduPortfolio = () => {
             variants={staggerContainer}
             className="text-center"
           >
-            {/* Avatar - Male placeholder */}
+            {/* Avatar image*/}
             <motion.div
               variants={fadeInUp}
               className="mb-8 flex justify-center"
@@ -454,8 +455,8 @@ const TechabduPortfolio = () => {
               className="text-xl md:text-2xl mb-8 leading-relaxed"
               style={{ color: theme.textSecondary }}
             >
-              Crafting web experiences that work beautifully. AI-enhanced development, 
-              minimalist design, intentional execution.
+              Software Engineer and Rapid Product Builder focusing on AI-assisted development. 
+              Shifting the focus from manual syntax to architectural clarity and intent-driven execution.
             </motion.p>
 
             <motion.p
@@ -463,9 +464,11 @@ const TechabduPortfolio = () => {
               className="text-lg mb-12 max-w-2xl mx-auto"
               style={{ color: theme.textSecondary }}
             >
-              I build functional web applications with clean code and thoughtful design. 
-              Every project is an opportunity to create something that not only works 
-              flawlessly but feels right to use.
+              I use AI to build software at an incredible pace, but I never sacrifice quality for speed. 
+              My focus is on taking your concept and turning it into a clean, robust, and maintainable codebase. 
+              I see AI as a force multiplier, not a replacement for expert judgment. 
+              Every project gets my full technical ownership, meaning I ensure the final product is not just fast to build,
+              but also secure, efficient, and ready for scale.
             </motion.p>
 
             {/* Tech stack with breathing animations */}
@@ -501,6 +504,125 @@ const TechabduPortfolio = () => {
                   {tech}
                 </motion.div>
               ))}
+            </motion.div>
+          </motion.div>
+        </div>
+      </section>
+
+            {/* ============================================
+          VIBE CODING PHILOSOPHY SECTION
+          Core principles and approach to development
+          ============================================ */}
+      <section className="py-24 px-6">
+        <div className="max-w-5xl mx-auto">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-100px" }}
+            variants={staggerContainer}
+          >
+            {/* Section heading */}
+            <motion.h2
+              variants={fadeInUp}
+              className="text-4xl md:text-5xl font-bold mb-12 text-center"
+            >
+              My Vibe Coding Philosophy
+            </motion.h2>
+
+            {/* Philosophy description */}
+            <motion.p
+              variants={fadeInUp}
+              className="text-xl text-center mb-16 max-w-3xl mx-auto leading-relaxed"
+              style={{ color: theme.textSecondary }}
+            >
+              This philosophy is how I guarantee my work delivers the speed of AI with the trust of expert engineering,
+              because i believe in building with purpose and clarity. Every line of code should serve a function, 
+              every design choice should enhance the experience.
+            </motion.p>
+
+            {/* Philosophy cards grid */}
+            <motion.div
+              variants={staggerContainer}
+              className="grid md:grid-cols-3 gap-8"
+            >
+              {/* Card 1: The Commitment to Speed & Focus */}
+              <motion.div
+                variants={fadeInUp}
+                whileHover={{ y: -10 }}
+                className="p-8 rounded-2xl backdrop-blur-sm transition-all duration-300"
+                style={{
+                  backgroundColor: isDark ? 'rgba(44, 44, 46, 0.6)' : 'rgba(255, 255, 255, 0.6)',
+                  border: `1px solid ${theme.border}`,
+                  boxShadow: isDark ? '0 8px 30px rgba(0,0,0,0.3)' : '0 8px 30px rgba(0,0,0,0.1)'
+                }}
+              >
+
+                <h3 className="text-2xl font-bold mb-4">The Commitment to Speed & Focus</h3>
+                <p style={{ color: theme.textSecondary }} className="leading-relaxed">
+                  I've stepped off the manual coding treadmill. Why spend hours on syntax the AI can generate in seconds? 
+                  My efficiency comes from treating Large Language Models (LLMs) as highly capable co-pilots, 
+                  allowing me to focus 90% of my energy on the true challenges: complex architecture, strategic 
+                  system design, and crystal-clear prompt engineering. This focus means we skip the boilerplate and 
+                  move exponentially faster from a great idea to a working product.
+                </p>
+              </motion.div>
+
+              {/* Card 2: The Commitment to Unwavering Quality */}
+              <motion.div
+                variants={fadeInUp}
+                whileHover={{ y: -10 }}
+                className="p-8 rounded-2xl backdrop-blur-sm transition-all duration-300"
+                style={{
+                  backgroundColor: isDark ? 'rgba(44, 44, 46, 0.6)' : 'rgba(255, 255, 255, 0.6)',
+                  border: `1px solid ${theme.border}`,
+                  boxShadow: isDark ? '0 8px 30px rgba(0,0,0,0.3)' : '0 8px 30px rgba(0,0,0,0.1)'
+                }}
+              >
+
+                <h3 className="text-2xl font-bold mb-4">The Commitment to Unwavering Quality</h3>
+                <p style={{ color: theme.textSecondary }} className="leading-relaxed">
+                  Let's be clear: AI-speed is nothing without human quality control. My Vibe Coding process means 
+                  I gain speed, but I never lose technical ownership. I take full responsibility for the final product, 
+                  which means every piece of AI-generated code must pass my rigorous human-in-the-loop review. 
+                  This includes comprehensive testing, proactive security auditing, and architectural validation to ensure
+                  the code is clean, modular, and built for scaling and long-term maintenance.
+                </p>
+              </motion.div>
+
+              {/* Card 3: The Commitment to Solving the Right Problem */}
+              <motion.div
+                variants={fadeInUp}
+                whileHover={{ y: -10 }}
+                className="p-8 rounded-2xl backdrop-blur-sm transition-all duration-300"
+                style={{
+                  backgroundColor: isDark ? 'rgba(44, 44, 46, 0.6)' : 'rgba(255, 255, 255, 0.6)',
+                  border: `1px solid ${theme.border}`,
+                  boxShadow: isDark ? '0 8px 30px rgba(0,0,0,0.3)' : '0 8px 30px rgba(0,0,0,0.1)'
+                }}
+              >
+
+                <h3 className="text-2xl font-bold mb-4">The Commitment to Solving the Right Problem</h3>
+                <p style={{ color: theme.textSecondary }} className="leading-relaxed">
+                  The best engineering solves the right business problem. The speed I gain from AI doesn't go into 
+                  my free time; it goes back into deeper iteration and feedback loops. I can spend more time focusing 
+                  on the client's needs, user experience, and the high-impact features that drive measurable results. 
+                  By automating the mundane, I free my mind to concentrate on the strategic decisions that truly deliver 
+                  value.
+                </p>
+              </motion.div>
+            </motion.div>
+
+            {/* Bottom quote */}
+            <motion.div
+              variants={fadeInUp}
+              className="mt-16 text-center"
+            >
+              <blockquote 
+                className="text-2xl font-light italic max-w-2xl mx-auto"
+                style={{ color: theme.textSecondary }}
+              >
+                "The most powerful code is the code you don't have to write, but the most trusted code is the code you still review."
+              </blockquote>
             </motion.div>
           </motion.div>
         </div>
