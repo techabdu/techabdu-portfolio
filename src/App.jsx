@@ -786,7 +786,7 @@ const TechabduPortfolio = () => {
 
             <motion.a
               variants={fadeInUp}
-              href="https://wa.me/1234567890"
+              href="https://wa.me/2349022167945"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-3 px-8 py-4 rounded-full font-medium text-lg transition-all duration-300"
